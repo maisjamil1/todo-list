@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/add" style="background-color: rgb(225, 209, 65);">add a new task</a>
+    <section>
+
+        <%tasks.forEach(task=>{%>
+            <div style="border: 2px solid red; margin: 20px; padding: 10px; text-align: center;">
+            <h1 style="color: darkblue;"><%=task.title%></h1>
+            <p style="color: rgb(139, 0, 109);"><%=task.status%></p>
+            <a href="/tasks/<%=task.id%>" style="background-color: rgb(240, 85, 227); color: black; font-size: 20px;">view details</a>
+        </div>
+            <%})%>
+    </section>
+</body>
+</html>

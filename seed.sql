@@ -1,0 +1,1 @@
+INSERT INTO yarb(title,description,contact,status,category)VALUES('MAIS','YARB','078','NOT','SHSH');

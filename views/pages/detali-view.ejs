@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+
+            <div style="border: 2px solid red; margin: 20px; padding: 10px; text-align: center;">
+            <h1 style="color: darkblue;"><%=task.title%></h1>
+            <p style="color: rgb(139, 0, 109);"><%=task.status%></p>
+            <p style="color: rgb(139, 0, 109);"><%=task.contact%></p>
+            <p style="color: rgb(139, 0, 109);"><%=task.category%></p>
+            <p style="color: rgb(139, 0, 109);"><%=task.description%></p>
+           
+          
+        </div>
+    </section>
+    <form action="/update/<%=task.id%>?_method=PUT" method="POST">
+        <input type="text" name="title" value="<%=task.title%>"> 
+        <input type="text" name="status" value="<%=task.status%>"> 
+        <input type="text" name="contact"value='<%=task.contact%>'> 
+        <input type="text" name="category" value="<%=task.category%>"> 
+        <input type="text" name="description" value="<%=task.description%>"> 
+                <button>update task</button>
+    </form>
+
+    <form action="/delete/<%=task.id%>?_method=DELETE" method="POST">
+        <button style="background-color: seagreen;">delete task</button>
+    </form>
+</body>
+</html>
